@@ -1,0 +1,77 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="bundle.js"></script>
+</head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+            <h1>Covid19_blockchain</h1>
+          <form id="New_state">
+            <h2>ENTER NEW STATE</h2>
+            <div class="form-group">
+                <label for="New_state-state_name">State Name</label>
+                <input id="New_state-state_name" type="text" class="form-control"></input>
+                <label for="New_state-activecases">Active cases</label>
+                <input id="New_state-activecases" type="number" class="form-control"></input>
+                <label for="New_state-effectedcases">Affected cases</label>
+                <input id="New_state-effectedcases" type="number" class="form-control"></input>
+                <label for="New_state-Deaths">Death</label>
+                <input id="New_state-Deaths" type="number" class="form-control"></input>
+                <label for="New_state-Recovered">Recovered</label>
+                <input id="New_state-Recovered" type="number" class="form-control"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p id="New_state-result"></p>
+          </form>
+
+          <hr>
+
+          <form id="Search_statename">
+            <h2>Enter the name of state to be searched</h2>
+            <div class="form-group">
+              <label for="Search_statename-state_name">State Name</label>
+              <input id="Search_statename-state_name" type="text" class="form-control"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p id="Search_statename-result"></p>
+          </form>
+
+          <hr>
+
+          <form id="Update_state">
+              <h2>Update State</h2>
+              <div class="form-group">
+                  <label for="Update_state-state_name">State Name</label>
+                  <input id="Update_state-state_name" type="text" class="form-control"></input>
+                  <label for="Update_state-activecases">Active cases</label>
+                  <input id="Update_state-activecases" type="number" class="form-control"></input>
+                  <label for="Update_state-effectedcases">Affected cases</label>
+                  <input id="Update_state-effectedcases" type="number" class="form-control"></input>
+                  <label for="Update_state-Deaths">Death</label>
+                  <input id="Update_state-Deaths" type="number" class="form-control"></input>
+                  <label for="Update_state-Recovered">Recovered</label>
+                  <input id="Update_state-Recovered" type="number" class="form-control"></input>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <p id="Update_state-result"></p>
+          </form>
+
+          <hr>
+
+          <form id="Delete_state">
+            <h2>Delete State</h2>
+            <div class="form-group">
+              <label for="Delete_state-state_name"></label>
+              <input id="Delete_state-state_name" type="text" class="form-control"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p id="Delete_state-result"></p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
