@@ -5,70 +5,169 @@
 </head>
   <body>
     <div class="container">
+      <h1 class="text-center">Health Care System</h1>
+      <hr />
       <div class="row">
         <div class="col-sm-12">
-            <h1>Covid19_blockchain</h1>
-          <form id="New_state">
-            <h2>ENTER NEW STATE</h2>
-            <div class="form-group">
-                <label for="New_state-state_name">State Name</label>
-                <input id="New_state-state_name" type="text" class="form-control"></input>
-                <label for="New_state-activecases">Active cases</label>
-                <input id="New_state-activecases" type="number" class="form-control"></input>
-                <label for="New_state-effectedcases">Affected cases</label>
-                <input id="New_state-effectedcases" type="number" class="form-control"></input>
-                <label for="New_state-Deaths">Death</label>
-                <input id="New_state-Deaths" type="number" class="form-control"></input>
-                <label for="New_state-Recovered">Recovered</label>
-                <input id="New_state-Recovered" type="number" class="form-control"></input>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <p id="New_state-result"></p>
-          </form>
 
-          <hr>
-
-          <form id="Search_statename">
-            <h2>Enter the name of state to be searched</h2>
-            <div class="form-group">
-              <label for="Search_statename-state_name">State Name</label>
-              <input id="Search_statename-state_name" type="text" class="form-control"></input>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <p id="Search_statename-result"></p>
-          </form>
-
-          <hr>
-
-          <form id="Update_state">
-              <h2>Update State</h2>
+          <!-- Create patient -->
+          <h3 class="text-center">Create Profile of a Patient</h3>
+          <hr/>
+            <form id="newPatientcreate">
               <div class="form-group">
-                  <label for="Update_state-state_name">State Name</label>
-                  <input id="Update_state-state_name" type="text" class="form-control"></input>
-                  <label for="Update_state-activecases">Active cases</label>
-                  <input id="Update_state-activecases" type="number" class="form-control"></input>
-                  <label for="Update_state-effectedcases">Affected cases</label>
-                  <input id="Update_state-effectedcases" type="number" class="form-control"></input>
-                  <label for="Update_state-Deaths">Death</label>
-                  <input id="Update_state-Deaths" type="number" class="form-control"></input>
-                  <label for="Update_state-Recovered">Recovered</label>
-                  <input id="Update_state-Recovered" type="number" class="form-control"></input>
+                <label for="patientName">Name</label>
+                <input type="text" class="form-control" id="patientName" placeholder="Enter Patient Name">
+              </div>
+              <div class="form-group">
+                <label for="dob">Year of Birth</label>
+                <input type="number" class="form-control" id="dob" placeholder="Enter year of birth">
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter City">
+              </div>
+              <div class="form-group">
+                <p id="newPatientMsg"></p>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
-              <p id="Update_state-result"></p>
-          </form>
+              <hr />
+            </form>
 
-          <hr>
-
-          <form id="Delete_state">
-            <h2>Delete State</h2>
+            <!-- show patient list -->
+            <!-- <h3>Show Patients</h3>
+            <form id="showPatients">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Year of Birth</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">City</th>
+                </tr>
+              </thead>
+              <tbody id="getPatients">
+              </tbody>
+            </table> -->
+          
+            <!-- Doctor Profile -->
+          <h3 class="text-center">Create Profile for Doctor</h3>
+          <hr/>
+          <form id="newDoctorcreate">
             <div class="form-group">
-              <label for="Delete_state-state_name"></label>
-              <input id="Delete_state-state_name" type="text" class="form-control"></input>
+              <label for="docName">Name</label>
+              <input type="text" class="form-control" id="docName" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+              <label for="licno">Licence no</label>
+              <input type="number" class="form-control" id="licno" placeholder="Enter licence no">
+            </div>
+            <div class="form-group">
+              <label for="specialization">Specialization</label>
+              <input type="text" class="form-control" id="specialization" placeholder="Enter Specialization">
+            </div>
+            <div class="form-group">
+              <p id="newDocMsg"></p>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-            <p id="Delete_state-result"></p>
+            <hr />
           </form>
+
+          <!-- create a health record -->
+          <h3 class="text-center">Create New Health Record</h3>
+          <hr/>
+          <form id="newHR">
+            <div class="form-group">
+              <label for="patientId">Patient Id</label>
+              <input type="number" class="form-control" id="patientId" placeholder="Enter Patient ID">
+            </div>
+            <div class="form-group">
+              <label for="docId">Doctor Id</label>
+              <input type="number" class="form-control" id="docId" placeholder="Enter Doctor Id">
+            </div>
+            <div class="form-group">
+              <label for="prescription">Prescription</label>
+              <input type="text" class="form-control" id="prescription" placeholder="Enter prescription">
+            </div>
+            <div class="form-group">
+              <label for="feedback">Feedback</label>
+              <input type="text" class="form-control" id="feedback" placeholder="Enter feedback">
+            </div>
+            <div class="form-group">
+              <label for="disease">Disease</label>
+              <input type="text" class="form-control" id="disease" placeholder="Enter disease">
+            </div>
+            <div class="form-group">
+              <p id="newHRMsg"></p>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <hr />
+          </form>
+
+          <h3 class="text-center">Search heavily infected disease in any city</h3>
+          <hr/>
+          <form id="cityToDisease">
+            <div class="form-group">
+              <label for="getcity">Enter city</label>
+              <input type="text" class="form-control" id="getcity" placeholder="Delhi...">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <hr />
+          </form>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Disease Name</th>
+                <th scope="col">Count</th>
+              </tr>
+            </thead>
+            <tbody id="getcityResult">
+              <!-- <tr>
+                <td scope="col">1</td>
+                <td scope="col">Corona</td>
+                <td scope="col">13</td>
+              </tr> -->
+            </tbody>
+          </table>
+
+          <h3 class="text-center">Search heavily infected city for any disease</h3>
+          <hr/>
+          <form id = "diseaseToCity">
+            <div class="form-group">
+              <label for="getDisease">Enter Disease</label>
+              <input type="text" class="form-control" id="getDisease" placeholder="Example...">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <hr />
+          </form>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">City Name</th>
+                <th scope="col">Count</th>
+              </tr>
+            </thead>
+            <tbody id="getdiseaseResult">
+              <!-- <tr>
+                <td scope="col">1</td>
+                <td scope="col">Corona</td>
+                <td scope="col">13</td>
+              </tr> -->
+            </tbody>
+          </table>
+
+          <hr>
 
         </div>
       </div>

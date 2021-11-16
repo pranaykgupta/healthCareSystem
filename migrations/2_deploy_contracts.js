@@ -1,6 +1,6 @@
 // JavaScript source code
-const Covid19_blockchain = artifacts.require("Covid19_blockchain");
+const HealthSystem = artifacts.require("HealthSystem");
 
 module.exports = function (deployer) {
-    deployer.deploy(Covid19_blockchain);
+    deployer.deploy(HealthSystem);
 };
