@@ -97,6 +97,10 @@ contract HealthSystem{
         return k;
     }
     
+    function getAllPatients() view public returns(Patient[] memory){
+        return Patients_list;
+    }
+    
     
     // doctor functions
     Doctor[] public Doctors_list;
@@ -107,6 +111,10 @@ contract HealthSystem{
         nextDoctorId++;
         uint _licenseNo = licenseNo;
         Doctors_list.push(Doctor(_id, name, _licenseNo, specialization));
+    }
+    
+    function getAllDoctors() view public returns(Doctor[] memory){
+        return Doctors_list;
     }
     
     // Health Record functions
@@ -149,6 +157,10 @@ contract HealthSystem{
         HealthRecords_list.push(HealthRecord(_id, _patientId, _doctorId, prescription, feedBack, disease));
     }
     
+    function getAllHealthRecords() view public returns(HealthRecord[] memory){
+        return HealthRecords_list;
+    }
+    
     function quickSort(OutputRecord[] memory arr, int left, int right) internal{
         int i = left;
         int j = right;
@@ -179,11 +191,6 @@ contract HealthSystem{
             string memory curDisease = cityDiseases[city][i];
             uint curVal = cityDiseaseMp[city][curDisease];
             tmp.push(OutputRecord(curDisease, curVal));
-            
-            // if(curVal > mxval){
-            //     mxval = curVal;
-            //     disease = curDisease;
-            // }
         }
         quickSort(tmp, int(0), int(tmp.length - 1));
         uint len = tmp.length;

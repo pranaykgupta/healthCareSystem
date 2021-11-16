@@ -39,7 +39,27 @@
               <button type="submit" class="btn btn-primary">Submit</button>
               <hr />
             </form>
-
+            <form id="getallPatients">
+              <button type="submit" class="btn btn-primary">Update Patient List</button>
+            </form>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Year of Birth</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">City</th>
+                </tr>
+              </thead>
+              <tbody id="allPatients">
+                <!-- <tr>
+                  <td scope="col">1</td>
+                  <td scope="col">Corona</td>
+                  <td scope="col">13</td>
+                </tr> -->
+              </tbody>
+            </table>
             <!-- show patient list -->
             <!-- <h3>Show Patients</h3>
             <form id="showPatients">
@@ -82,6 +102,28 @@
             <hr />
           </form>
 
+          <!-- show doctor list -->
+          <form id="getallDoctors">
+            <button type="submit" class="btn btn-primary">Update Doctor List</button>
+          </form>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Licence Number</th>
+                <th scope="col">Specialization</th>
+              </tr>
+            </thead>
+            <tbody id="allDoctors">
+              <!-- <tr>
+                <td scope="col">1</td>
+                <td scope="col">Corona</td>
+                <td scope="col">13</td>
+              </tr> -->
+            </tbody>
+          </table>
+
           <!-- create a health record -->
           <h3 class="text-center">Create New Health Record</h3>
           <hr/>
@@ -112,6 +154,30 @@
             <button type="submit" class="btn btn-primary">Submit</button>
             <hr />
           </form>
+
+          <!-- get all HR -->
+          <form id="getallHR">
+            <button type="submit" class="btn btn-primary">Update Health Record List</button>
+          </form>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Patient ID</th>
+                <th scope="col">Doctor ID</th>
+                <th scope="col">Presctiption</th>
+                <th scope="col">FeedBack</th>
+                <th scope="col">Disease</th>
+              </tr>
+            </thead>
+            <tbody id="allHR">
+              <!-- <tr>
+                <td scope="col">1</td>
+                <td scope="col">Corona</td>
+                <td scope="col">13</td>
+              </tr> -->
+            </tbody>
+          </table>
 
           <h3 class="text-center">Search heavily infected disease in any city</h3>
           <hr/>
