@@ -1,5 +1,5 @@
-# Covid_19_Local_Daap
- Ethereum - Covid19_blockchain
+# HealthCareSystem_Daap
+ Ethereum - HealthCareSystem_blockchain
 
 FOR LOCAL HOSTING
 
@@ -8,13 +8,9 @@ FOR LOCAL HOSTING
 Steps
 1. Compile the smart contract by writing `truffle compile`
 2. Run the migration running `truffle migrate --reset`
-3. Run `truffle test` on command line
-4. Run `npm install`
-Note- some errors will come so, follow step 5. else go to step 6
-5. Run `npm install`
-- Start the web client using command `npm start`
-6. run `npm start`
-
+3. Run `npm install`
+4. Start the web client using command `npm start`
+5. Open the url `http://localhost:8080/` to access the User Interface.
 
 
 NOTE--  Before shifting to new metamash account ,refresh the browser as
